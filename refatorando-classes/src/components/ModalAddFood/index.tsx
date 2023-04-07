@@ -1,4 +1,4 @@
-import { createRef } from "react";
+import { useRef } from "react";
 import { FiCheckSquare } from "react-icons/fi";
 
 import { Form } from "./styles";
@@ -16,7 +16,7 @@ const ModalAddFood = ({
   setIsOpen,
   handleAddFood,
 }: ModalAddFoodProps) => {
-  const formRef = createRef();
+  const formRef = useRef(null);
 
   const handleSubmit = async (data: any) => {
     handleAddFood(data);

@@ -24,7 +24,7 @@ class Dashboard extends Component {
     this.setState({ foods: response.data });
   }
 
-  handleAddFood = async (food) => {
+  handleAddFood = async (food: any) => {
     const { foods } = this.state;
 
     try {
