@@ -3,11 +3,12 @@ import { FiEdit3, FiTrash } from "react-icons/fi";
 import { Container } from "./styles";
 import api from "../../services/api";
 import { useState } from "react";
+import { foodsProps } from "../../pages/Dashboard";
 
 interface FoodProps {
   image: string;
   handleDelete: (id: any) => void;
-  food: any;
+  food: foodsProps;
   handleEditFood: any;
 }
 
