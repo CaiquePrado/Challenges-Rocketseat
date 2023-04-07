@@ -4,6 +4,10 @@ import { FiEdit3, FiTrash } from "react-icons/fi";
 import { Container } from "./styles";
 import api from "../../services/api";
 
+interface FoodProps {
+  image: string;
+}
+
 class Food extends Component {
   constructor(props) {
     super(props);
