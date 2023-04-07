@@ -6,6 +6,7 @@ import { Container } from "./styles";
 
 interface InputProps {
   name: string;
+  icon?: React.ComponentType<{ size: number }>;
   placeholder: string;
 }
 
