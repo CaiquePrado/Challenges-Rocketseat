@@ -28,15 +28,15 @@ export const Home = () => {
   // }, {} as CartItemsAmount)
 
   useEffect(() => {
-    async function loadProducts() {
-      const response = await api.get("/products");
-      const data = response.data;
-
-      setProducts(data);
-    }
-
     loadProducts();
   }, []);
+
+  const loadProducts = async () => {
+    const response = await api.get("/products");
+    const data = response.data;
+
+    setProducts((state) => [...state, data]);
+  };
 
   function handleAddProduct(id: number) {
     // TODO
