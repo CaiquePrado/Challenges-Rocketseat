@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 
 import { api } from "../../services/api";
+import { formatPrice } from "../../util/format";
 import { ProductList } from "./styles";
 
 interface Product {
@@ -35,35 +36,35 @@ export const Home = () => {
     const response = await api.get("/products");
     const data = response.data;
 
-    setProducts((state) => [...state, data]);
+    setProducts(data);
   };
 
   function handleAddProduct(id: number) {
-    // TODO
+    try {
+    } catch (error) {}
   }
 
   return (
     <ProductList>
-      <li>
-        <img
-          src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
-          alt="Tênis de Caminhada Leve Confortável"
-        />
-        <strong>Tênis de Caminhada Leve Confortável</strong>
-        <span>R$ 179,90</span>
-        <button
-          type="button"
-          data-testid="add-product-button"
-          // onClick={() => handleAddProduct(product.id)}
-        >
-          <div data-testid="cart-product-quantity">
-            <MdAddShoppingCart size={16} color="#FFF" />
-            {/* {cartItemsAmount[product.id] || 0} */} 2
-          </div>
+      {products.map((product) => (
+        <li key={product.id}>
+          <img src={product.image} alt="Tênis de Caminhada Leve Confortável" />
+          <strong>{product.title}</strong>
+          <span>{formatPrice(product.price)}</span>
+          <button
+            type="button"
+            data-testid="add-product-button"
+            // onClick={() => handleAddProduct(product.id)}
+          >
+            <div data-testid="cart-product-quantity">
+              <MdAddShoppingCart size={16} color="#FFF" />
+              {/* {cartItemsAmount[product.id] || 0} */} 2
+            </div>
 
-          <span>ADICIONAR AO CARRINHO</span>
-        </button>
-      </li>
+            <span>ADICIONAR AO CARRINHO</span>
+          </button>
+        </li>
+      ))}
     </ProductList>
   );
 };
