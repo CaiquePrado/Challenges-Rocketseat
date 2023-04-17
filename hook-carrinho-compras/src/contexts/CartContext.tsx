@@ -1,4 +1,6 @@
 import { createContext, ReactNode, useContext, useState } from "react";
+import { toast } from "react-toastify";
+import { api } from "../services/api";
 import { Product } from "../types";
 
 interface CartProviderProps {
@@ -23,28 +25,31 @@ export const CartContext = createContext<CartContextData>(
 
 export const CartProvider = ({ children }: CartProviderProps) => {
   const [cart, setCart] = useState<Product[]>(() => {
-    // const storagedCart = Buscar dados do localStorage
+    const storagedCart = localStorage.getItem("@RocketShoes:cart");
 
-    // if (storagedCart) {
-    //   return JSON.parse(storagedCart);
-    // }
+    if (storagedCart) {
+      return JSON.parse(storagedCart);
+    }
 
     return [];
   });
 
   const addProduct = async (productId: number) => {
     try {
-      // TODO
+      const newProduct = [...cart];
+      await api.get(`/stock/${productId}`);
     } catch {
-      // TODO
+      toast.error("Quantidade solicitada fora de estoque");
     }
   };
 
   const removeProduct = (productId: number) => {
     try {
-      // TODO
+      const newProduct = [...cart].filter((item) => item.id !== productId);
+      setCart(newProduct);
+      localStorage.setItem("@RocketShoes:cart", JSON.stringify(newProduct));
     } catch {
-      // TODO
+      toast.error("Erro na remoção do produto");
     }
   };
 
@@ -55,7 +60,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     try {
       // TODO
     } catch {
-      // TODO
+      toast.error("Erro na adição do produto");
     }
   };
 
