@@ -7,20 +7,19 @@ Repositório destinado a armazenar todas as resoluções dos desafios que desenv
 &nbsp;
 
 ## Desafio 01 - Componentizando a Aplicação
-<img src="https://user-images.githubusercontent.com/71772559/178170317-063200c0-4605-491a-80df-421ae6eef864.png" align="center" />
+<img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F88f057c2-d29a-4b0d-b9ed-f11385e09030%2Fexample.png?id=673530e2-c5dc-4813-97f2-37c4dfabc170&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=1340&userId=&cache=v2" align="center" />
 
-Durante este desafio, utilizamos os conceitos básicos do React desenvolvendo do zero uma simples lista de tarefas com as opções de criar e apagar um item da lista.
-
+Durante este desafio, utilizamos os conceitos de tipagem no React refatorando uma página para listagem de filmes de acordo com gênero. 
 ### 🛠️ Nesse projeto foi utilizado
 
-* Vite
-* CSS Modules
+* Interfaces
+* Props
 * Typescript
-* Local Storage
+* State Lift
 
 <br />
 
-<a href="/praticando-os-conceitos" target="_blank">
+<a href="/componentizando-a-aplicacao" target="_blank">
 <img src="https://user-images.githubusercontent.com/71772559/178192378-234b9c46-7e31-47fb-8ddf-245617d8b198.png" />
 </a>
 
