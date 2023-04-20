@@ -44,15 +44,34 @@ export const CartProvider = ({ children }: CartProviderProps) => {
         const { data: products } = await api.get<Product>(
           `products/${productId}`
         );
-
         const { data: stock } = await api.get<Stock>(`stock/${productId}`);
         if (stock.amount > 0) {
+          setCart([...cart, { ...products, amount: 1 }]);
+          localStorage.setItem(
+            "@RocketShoes:cart",
+            JSON.stringify([...cart, { ...products, amount: 1 }])
+          );
+          toast("Adicionado!");
+          return;
         }
-        localStorage.setItem("@RocketShoes:cart", JSON.stringify(""));
-        return;
+      }
+
+      if (productAlreadyExists) {
+        const { data: stock } = await api.get<Stock>(`stock/${productId}`);
+
+        if (stock.amount > productAlreadyExists.amount) {
+          const newProduct = [...cart].map((cartItem) =>
+            cartItem.id === productId
+              ? { ...cartItem, amount: Number(cartItem.amount) + 1 }
+              : cartItem
+          );
+          setCart(newProduct);
+          localStorage.setItem("@RocketShoes:cart", JSON.stringify("voce"));
+          return;
+        }
       }
     } catch {
-      toast.error("Quantidade solicitada fora de estoque");
+      toast.error("Erro na adição do produto");
     }
   };
 
