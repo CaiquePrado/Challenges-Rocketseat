@@ -21,6 +21,7 @@ export const Cart = () => {
 
   const cartFormatted = cart.map((product) => ({
     ...product,
+    subtotal: formatPrice(product.price),
   }));
   const total = formatPrice(
     cart.reduce((sumTotal, product) => {
@@ -90,7 +91,7 @@ export const Cart = () => {
                 </div>
               </td>
               <td>
-                <strong>R$ 359,80</strong>
+                <strong>{product.subtotal}</strong>
               </td>
               <td>
                 <button
@@ -111,7 +112,7 @@ export const Cart = () => {
 
         <Total>
           <span>TOTAL</span>
-          <strong>R$ 359,80</strong>
+          <strong>{total}</strong>
         </Total>
       </footer>
     </Container>
