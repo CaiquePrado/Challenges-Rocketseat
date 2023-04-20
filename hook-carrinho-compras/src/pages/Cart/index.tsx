@@ -5,7 +5,7 @@ import {
 } from "react-icons/md";
 
 import { useCart } from "../../contexts/CartContext";
-// import { formatPrice } from '../../util/format';
+import { formatPrice } from "../../util/format";
 import { Container, ProductTable, Total } from "./styles";
 
 interface Product {
@@ -19,15 +19,16 @@ interface Product {
 export const Cart = () => {
   const { cart, removeProduct, updateProductAmount } = useCart();
 
-  // const cartFormatted = cart.map(product => ({
-  //   // TODO
-  // }))
-  // const total =
-  //   formatPrice(
-  //     cart.reduce((sumTotal, product) => {
-  //       // TODO
-  //     }, 0)
-  //   )
+  const cartFormatted = cart.map((product) => ({
+    ...product,
+  }));
+  const total = formatPrice(
+    cart.reduce((sumTotal, product) => {
+      sumTotal += product.amount * product.price;
+
+      return sumTotal;
+    }, 0)
+  );
 
   function handleProductIncrement(product: Product) {
     // TODO
@@ -54,24 +55,21 @@ export const Cart = () => {
           </tr>
         </thead>
         <tbody>
-          {cart.map((product) => (
+          {cartFormatted.map((product) => (
             <tr data-testid="product" key={product.id}>
               <td>
-                <img
-                  src="https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
-                  alt="Tênis de Caminhada Leve Confortável"
-                />
+                <img src={product.image} alt={product.title} />
               </td>
               <td>
-                <strong>Tênis de Caminhada Leve Confortável</strong>
-                <span>R$ 179,90</span>
+                <strong>{product.title}</strong>
+                <span>{formatPrice(product.price)}</span>
               </td>
               <td>
                 <div>
                   <button
                     type="button"
                     data-testid="decrement-product"
-                    // disabled={product.amount <= 1}
+                    disabled={product.amount <= 1}
                     // onClick={() => handleProductDecrement()}
                   >
                     <MdRemoveCircleOutline size={20} />
