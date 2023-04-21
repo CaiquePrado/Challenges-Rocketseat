@@ -9,13 +9,7 @@ Repositório destinado a armazenar todas as resoluções dos desafios que desenv
 ## Desafio 01 - Componentizando a Aplicação
 <img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2F88f057c2-d29a-4b0d-b9ed-f11385e09030%2Fexample.png?id=673530e2-c5dc-4813-97f2-37c4dfabc170&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=1340&userId=&cache=v2" align="center" />
 
-Durante este desafio, utilizamos os conceitos de tipagem no React refatorando uma página para listagem de filmes de acordo com gênero. 
-### 🛠️ Nesse projeto foi utilizado
-
-* Interfaces
-* Props
-* Typescript
-* State Lift
+Durante este desafio, utilizamos os conceitos de tipagem no React, refatorando uma página para listagem de filmes de acordo com gênero. 
 
 <br />
 
@@ -26,20 +20,9 @@ Durante este desafio, utilizamos os conceitos de tipagem no React refatorando um
 &nbsp;
 
 ## Desafio 02 - Refatorando Classes
-<img src="" align="center" />
+<img src="./refatorando-classes/src/assets/classes.png" align="center" />
 
-Durante este desafio, utilizamos conceitos um pouco mais avançados desenvolvendo do zero uma aplicação de encomenda de cafés! A aplicação conta com 3 telas sendo a primeira uma tela de apresentação e também de listagem dos cafés disponíveis. Na segunda tela, o usuário precisa preencher um formulário com seus dados de endereço e ao lado direito é possível visualizar os itens do carrinho, podendo alterar a quantidade ou remover o mesmo. Na terceira e última tela, é exibido uma confirmação do pedido e também os detalhes de entrega da compra.
-
-### 🛠️ Nesse projeto foi utilizado
-
-* Vite
-* Styled Components
-* Local Storage
-* Typescript
-* Context API
-* React Router Dom
-* React Hook Form
-* Validações de formulário com Zod
+Durante este desafio, utilizamos uma aplicação já funcional, cujo o principal objetivo foi realizar realizar dois processos de migração: de Javascript para Typescript e de Class Components para Function Components.
 
 <br />
 
@@ -52,17 +35,8 @@ Durante este desafio, utilizamos conceitos um pouco mais avançados desenvolvend
 ## Desafio 03 - Hook Carrinho de Compras
 <img src="https://efficient-sloth-d85.notion.site/image/https%3A%2F%2Fs3-us-west-2.amazonaws.com%2Fsecure.notion-static.com%2Fa34120df-4046-4a84-8133-6eb987bceac6%2FUntitled.png?id=4e3c96e5-f7a7-4e1a-9fa9-34d99494047b&table=block&spaceId=08f749ff-d06d-49a8-a488-9846e081b224&width=2000&userId=&cache=v2" />
 
-Durante este desafio, desenvolvemos uma aplicação que utiliza a API do GitHub para buscar issues de um repositório, dados do perfil e exibir elas como um blog.
+Durante este desafio desenvolvemos um carrinho de compras, adicionando um novo produto ao carrinho, removendo um produto do carrinho, Alterando a quantidade de um produto no carrinho, calculando os preços sub-total e total do carrinho, validando o estoque e exibindo mensagens de erro.
 
-### 🛠️ Nesse projeto foi utilizado
-
-* Vite
-* Styled Components
-* Typescript
-* React Router Dom
-* React Hook Form
-* Axios
-* API do Github
 
 <br />
 
