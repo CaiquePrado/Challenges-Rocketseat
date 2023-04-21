@@ -32,11 +32,21 @@ export const Cart = () => {
   );
 
   function handleProductIncrement(product: Product) {
-    // TODO
+    const increment = {
+      productId: product.id,
+      amount: product.amount + 1,
+    };
+
+    updateProductAmount(increment);
   }
 
   function handleProductDecrement(product: Product) {
-    // TODO
+    const decrement = {
+      productId: product.id,
+      amount: product.amount + -1,
+    };
+
+    updateProductAmount(decrement);
   }
 
   function handleRemoveProduct(productId: number) {
@@ -71,7 +81,7 @@ export const Cart = () => {
                     type="button"
                     data-testid="decrement-product"
                     disabled={product.amount <= 1}
-                    // onClick={() => handleProductDecrement()}
+                    onClick={() => handleProductDecrement(product)}
                   >
                     <MdRemoveCircleOutline size={20} />
                   </button>
@@ -79,12 +89,12 @@ export const Cart = () => {
                     type="text"
                     data-testid="product-amount"
                     readOnly
-                    value={2}
+                    value={product.amount}
                   />
                   <button
                     type="button"
                     data-testid="increment-product"
-                    // onClick={() => handleProductIncrement()}
+                    onClick={() => handleProductIncrement(product)}
                   >
                     <MdAddCircleOutline size={20} />
                   </button>

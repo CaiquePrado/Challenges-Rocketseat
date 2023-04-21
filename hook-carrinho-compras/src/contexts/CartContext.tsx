@@ -102,7 +102,7 @@ export const CartProvider = ({ children }: CartProviderProps) => {
     amount,
   }: UpdateProductAmount) => {
     try {
-      if (amount > 1) {
+      if (amount < 1) {
         toast.error("Erro na alteração da quantidade do produto");
         return;
       }
