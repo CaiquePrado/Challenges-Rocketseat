@@ -1,18 +1,16 @@
 import { extendTheme } from "@chakra-ui/react";
 
-export const Theme = extendTheme({
+export const theme = extendTheme({
   colors: {
     Highlight: "#FFBA08",
-    Dark: {
-      Black: "#000000",
-      HeadingsAndText: "#47585B",
-      Info: "#999999",
-    },
-    Light: {
-      White: "#FFFFFF",
-      HeadingsAndText: "#F5F8FA",
-      Info: "#DADADA",
-    },
+
+    Black: "#000000",
+    HeadingsAndTextGray: "#47585B",
+    Infogray: "#999999",
+
+    White: "#FFFFFF",
+    HeadingsAndTextWhite: "#F5F8FA",
+    InfoWhite: "#DADADA",
   },
   fontSizes: {
     xs: "1rem",

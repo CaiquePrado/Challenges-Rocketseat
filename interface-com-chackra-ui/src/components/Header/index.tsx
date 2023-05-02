@@ -8,7 +8,7 @@ export const Header = () => {
   });
 
   return (
-    <Flex as="header" width="100%" height={100} justify="center" align="center">
+    <Flex as="header" w="100%" h={100} justify="center" align="center">
       <Logo src="/Logo.svg" width={184} height={46} alt="logo worldTrip" />
     </Flex>
   );
