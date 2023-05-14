@@ -9,6 +9,7 @@ export const TravelTypes = () => {
       maxWidth={1160}
       width="100%"
       align="center"
+      flexWrap="wrap"
       justifyContent="space-between"
     >
       <Flex flexDirection="column" align="center" gap="24px">
@@ -55,6 +56,7 @@ export const TravelTypes = () => {
           fontSize={theme.fontSizes.md}
           fontWeight={theme.fontWeights.semibold}
           lineHeight="36px"
+          textAlign="center"
         >
           Moderno
         </Text>

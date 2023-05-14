@@ -1,0 +1,39 @@
+{
+  "continents": [
+    {
+      "id": 1,
+      "title": "Europa",
+      "subtitle": "O continente mais antigo",
+      "body": "A Europa é, por convenção, um dos seis continentes do mundo. Compreendendo a península ocidental da Eurásia, a Europa geralmente divide-se da Ásia a leste pela divisória de águas dos montes Urais, o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.",
+      "image": "https://images.unsplash.com/photo-1519677100203-a0e668c92439?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8ZXVyb3BhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 2,
+      "title": "North America",
+      "subtitle": "Composta apenas por 3 países",
+      "body": "A América do Norte é dividida em três países principais: Canadá, Estados Unidos e México, que possuem áreas geográficas distintas. A parte norte do continente é dominada pelas Montanhas Rochosas, as Montanhas do Alasca e as Cordilheiras do Yukon, bem como vastas planícies e terras agrícolas. As Grandes Planícies, que se estendem do Canadá até o centro dos Estados Unidos, são uma grande área de pradarias e são conhecidas por seus extensos campos de trigo.",
+      "image": "https://images.unsplash.com/photo-1589871090211-7f2efeec05b6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8bm9ydGglMjBhbWVyaWNhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 3,
+      "title": "Ásia",
+      "subtitle": "O maior continente da Terra",
+      "body": "Ásia é o continente mais populoso do mundo, com mais de 4,6 bilhões de habitantes, abrigando mais de 60% da população mundial.A Ásia é geograficamente diversa, com uma grande variedade de climas, paisagens e ecossistemas. A região é composta por montanhas, planaltos, desertos, florestas, rios e lagos. As principais cordilheiras da Ásia incluem os Himalaias, que abrigam a montanha mais alta do mundo, o Monte Everest, e as montanhas Tien Shan e Kunlun.",
+      "image": "https://images.unsplash.com/photo-1492571350019-22de08371fd3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fCVDMyU4MXNpYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 4,
+      "title": "África",
+      "subtitle": "O único continente que abrange todos os climas da Terra",
+      "body": "Os pontos geográficos mais notáveis ​​da África incluem o Monte Kilimanjaro, o Monte Atlas, as Cataratas Vitória, o Rio Nilo e o Deserto do Saara, que é o maior deserto quente do mundo e cobre uma grande parte do continente.É o lar de uma grande variedade de grupos étnicos, culturas e línguas, tornando-o um dos continentes mais diversificados do mundo.",
+      "image": "https://images.unsplash.com/photo-1614531341773-3bff8b7cb3fc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fCVDMyU4MWZyaWNhfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
+    },
+    {
+      "id": 5,
+      "title": "Oceania",
+      "subtitle": "O menor continente do mundo",
+      "body": "A Oceania é o menor continente do mundo e é composta por vários grupos de ilhas espalhadas pelo Oceano Pacífico. O continente é formado por quatro regiões principais: a Austrália, a Melanésia, a Micronésia e a Polinésia.Suas ilhas abrigam uma grande variedade de animais e plantas únicas, muitas das quais são endêmicas da região.",
+      "image": "https://images.unsplash.com/photo-1588001400947-6385aef4ab0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8T2NlYW5pYXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+    }
+  ]
+}
